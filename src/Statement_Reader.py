@@ -41,5 +41,5 @@ def statement_reader(file_path):
 
     return f"Below is the text from PAGE {p+1}: \n{text}\n "
 #"\n".join((out))
-pdf = statement_reader('C:\\users\\antuj\\onedrive\\documents\\finance\\statements\\chime\\Tamara_Russell_Checking_eStatement-1.pdf')
+pdf = statement_reader()
 print(pdf)

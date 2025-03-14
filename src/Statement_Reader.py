@@ -25,7 +25,6 @@ def statement_reader(file_path):
 
     return text
 
-
 print("Test/Commonweath-Bank-Statement-Template.pdf")
 
 

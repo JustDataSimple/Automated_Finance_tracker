@@ -9,6 +9,7 @@ It allows users to select specific pages to view from a PDF document.
 
 def statement_reader(file_path):
 
+
     """Extract text from a PDF file and allow user to select a specific page.
 
     This function opens a PDF file, extracts text from all pages, and

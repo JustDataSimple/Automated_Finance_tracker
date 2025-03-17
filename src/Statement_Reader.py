@@ -2,9 +2,7 @@ def statement_reader(file_path):
     import pypdf
 
     '''
-    Func: Makes pdf accessible for parsing with using 'open'
-    Parses, reads, and extracts text from .pdf formatted statements 
-    using the pypdf library and the pdfreader class.
+    Func: 
 
     '''
 
@@ -14,19 +12,34 @@ def statement_reader(file_path):
     with open(file_path, 'rb') as file:
 
         # when called, parses the binary code (from variable 'file') into .pdf format
-        # stores/assigns .pdf format (return value) to variable 'reader'
+        # stores/assigns .pdf object (return value) to variable 'reader'
         reader = pypdf.PdfReader(file)
 
-        # reads the all ages in the length of the .pdf
-        # extracts the text
-        # stores/assigns the extracted text (return value) to variable 'text'
-        text = reader.pages[len(reader.pages)].extract_text()
-        print(text)
+        # accesses pages in the length of the .pdf
+        # stores/assigns the total number of pages ((int) return value) to variable 'num_pages'
+        #num_pages = lereader.pages
 
-    return text
+        #outputs the total number of pages to the console
+        #print(f"Number of pages: {num_pages}")
 
+        # for loop that iterates over each page, starting at '0'
+        for p in range(len(reader.pages)):
 
-print("Test/Commonweath-Bank-Statement-Template.pdf")
+            # contains appended text
+            # this allows for a custom output
+            #out = []
 
+            #sores/assigns the current index "p" ((pdf page) return value) to variable 'page'
+            page = reader.pages[p]
 
+            # extracts the text from current index ((variable 'page') 'p')
+            # stores/assigns extracted text (return value) to variable 'text'
+            text = page.extract_text()
 
+            # outputs: The text on page (page number) is: (extracted text)
+            #out.append
+
+    return f"Below is the text from PAGE {p+1}: \n{text}\n "
+#"\n".join((out))
+pdf = statement_reader()
+print(pdf)

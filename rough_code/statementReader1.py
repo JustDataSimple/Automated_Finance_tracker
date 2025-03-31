@@ -55,10 +55,12 @@ def statement_reader(file_path):
                 for i in texts:
                     words = []
                     while i < len(texts):
-                        txtWords = texts[i].split()
+                        a = list(texts.values())[i]
+                        print(a)
+                        txtWords = a.split()
                         words.append(txtWords)
                     for j in words:
-                        return j
+                        print(j)
 
             # keep asking until a valid integer is returned
             while True:
